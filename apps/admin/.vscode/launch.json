@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug React Run",
+      "url": "http://baldoria.localhost:3008",
+      "webRoot": "${workspaceFolder}/apps/admin/src",
+      "sourceMaps": true,
+      "breakOnLoad": true
+      //   "sourceMapPathOverrides": {
+      //     "webpack:///./src/*": "${webRoot}/dist/*",
+      //     "webpack:///src/*": "${webRoot}/dist/*"
+      //   }
+    }
+  ]
+}

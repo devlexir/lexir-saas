@@ -1,0 +1,25 @@
+{
+  "headers": [
+    {
+      "source": "/fonts/inter-var-latin.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_REST_API_ENDPOINT": "",
+    "NEXT_PUBLIC_SHOP_URL": "",
+    "NEXT_PUBLIC_GOOGLE_MAP_API_KEY": ""
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_REST_API_ENDPOINT": "",
+      "NEXT_PUBLIC_SHOP_URL": "",
+      "NEXT_PUBLIC_GOOGLE_MAP_API_KEY": ""
+    }
+  }
+}

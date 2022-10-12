@@ -1,0 +1,9 @@
+input[type='range']::-webkit-slider-thumb {
+  background-color: white;
+  border: 1px solid black;
+  pointer-events: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+}

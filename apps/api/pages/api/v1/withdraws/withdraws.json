@@ -1,0 +1,447 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "shop_id": 1,
+      "amount": 186,
+      "payment_method": null,
+      "status": "pending",
+      "details": null,
+      "note": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T16:29:13.000Z",
+      "updated_at": "2022-03-05T15:37:08.000Z",
+      "shop": {
+        "id": 1,
+        "owner_id": 1,
+        "name": "Temper studios",
+        "slug": "temper-studios",
+        "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+        "cover_image": {
+          "id": 103,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/Cover-3.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/conversions/Cover-3-thumbnail.jpg"
+        },
+        "logo": {
+          "id": 102,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/Group-14405.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/conversions/Group-14405-thumbnail.jpg"
+        },
+        "is_active": 1,
+        "address": {
+          "zip": "37072",
+          "city": "Goodlettsville",
+          "state": "Tennessee",
+          "country": "USA",
+          "street_address": "3399 Buffalo Creek Road"
+        },
+        "settings": {
+          "contact": "0799302967",
+          "socials": [
+            {
+              "url": "https://www.facebook.com/lexirinc/",
+              "icon": "FacebookIcon"
+            },
+            {
+              "url": "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+              "icon": "YouTubeIcon"
+            }
+          ],
+          "website": "https://lexir.io/",
+          "location": []
+        },
+        "created_at": "2022-01-22T16:30:50.000000Z",
+        "updated_at": "2022-02-24T04:56:16.000000Z"
+      }
+    },
+    {
+      "id": 2,
+      "shop_id": 1,
+      "amount": 231,
+      "payment_method": null,
+      "status": "approved",
+      "details": null,
+      "note": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T16:29:13.000Z",
+      "updated_at": "2022-03-05T15:37:08.000Z",
+      "shop": {
+        "id": 1,
+        "owner_id": 1,
+        "name": "Temper studios",
+        "slug": "temper-studios",
+        "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+        "cover_image": {
+          "id": 103,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/Cover-3.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/conversions/Cover-3-thumbnail.jpg"
+        },
+        "logo": {
+          "id": 102,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/Group-14405.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/conversions/Group-14405-thumbnail.jpg"
+        },
+        "is_active": 1,
+        "address": {
+          "zip": "37072",
+          "city": "Goodlettsville",
+          "state": "Tennessee",
+          "country": "USA",
+          "street_address": "3399 Buffalo Creek Road"
+        },
+        "settings": {
+          "contact": "0799302967",
+          "socials": [
+            {
+              "url": "https://www.facebook.com/lexirinc/",
+              "icon": "FacebookIcon"
+            },
+            {
+              "url": "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+              "icon": "YouTubeIcon"
+            }
+          ],
+          "website": "https://lexir.io/",
+          "location": []
+        },
+        "created_at": "2022-01-22T16:30:50.000000Z",
+        "updated_at": "2022-02-24T04:56:16.000000Z"
+      }
+    },
+    {
+      "id": 3,
+      "shop_id": 1,
+      "amount": 50,
+      "payment_method": null,
+      "status": "on_hold",
+      "details": null,
+      "note": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T16:29:13.000Z",
+      "updated_at": "2022-03-05T15:37:08.000Z",
+      "shop": {
+        "id": 1,
+        "owner_id": 1,
+        "name": "Temper studios",
+        "slug": "temper-studios",
+        "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+        "cover_image": {
+          "id": 103,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/Cover-3.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/conversions/Cover-3-thumbnail.jpg"
+        },
+        "logo": {
+          "id": 102,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/Group-14405.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/conversions/Group-14405-thumbnail.jpg"
+        },
+        "is_active": 1,
+        "address": {
+          "zip": "37072",
+          "city": "Goodlettsville",
+          "state": "Tennessee",
+          "country": "USA",
+          "street_address": "3399 Buffalo Creek Road"
+        },
+        "settings": {
+          "contact": "0799302967",
+          "socials": [
+            {
+              "url": "https://www.facebook.com/lexirinc/",
+              "icon": "FacebookIcon"
+            },
+            {
+              "url": "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+              "icon": "YouTubeIcon"
+            }
+          ],
+          "website": "https://lexir.io/",
+          "location": []
+        },
+        "created_at": "2022-01-22T16:30:50.000000Z",
+        "updated_at": "2022-02-24T04:56:16.000000Z"
+      }
+    },
+    {
+      "id": 4,
+      "shop_id": 1,
+      "amount": 545,
+      "payment_method": null,
+      "status": "approved",
+      "details": null,
+      "note": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T16:29:13.000Z",
+      "updated_at": "2022-03-05T15:37:08.000Z",
+      "shop": {
+        "id": 1,
+        "owner_id": 1,
+        "name": "Temper studios",
+        "slug": "temper-studios",
+        "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+        "cover_image": {
+          "id": 103,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/Cover-3.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/conversions/Cover-3-thumbnail.jpg"
+        },
+        "logo": {
+          "id": 102,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/Group-14405.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/conversions/Group-14405-thumbnail.jpg"
+        },
+        "is_active": 1,
+        "address": {
+          "zip": "37072",
+          "city": "Goodlettsville",
+          "state": "Tennessee",
+          "country": "USA",
+          "street_address": "3399 Buffalo Creek Road"
+        },
+        "settings": {
+          "contact": "0799302967",
+          "socials": [
+            {
+              "url": "https://www.facebook.com/lexirinc/",
+              "icon": "FacebookIcon"
+            },
+            {
+              "url": "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+              "icon": "YouTubeIcon"
+            }
+          ],
+          "website": "https://lexir.io/",
+          "location": []
+        },
+        "created_at": "2022-01-22T16:30:50.000000Z",
+        "updated_at": "2022-02-24T04:56:16.000000Z"
+      }
+    },
+    {
+      "id": 5,
+      "shop_id": 1,
+      "amount": 232,
+      "payment_method": null,
+      "status": "processing",
+      "details": null,
+      "note": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T16:29:13.000Z",
+      "updated_at": "2022-03-05T15:37:08.000Z",
+      "shop": {
+        "id": 1,
+        "owner_id": 1,
+        "name": "Temper studios",
+        "slug": "temper-studios",
+        "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+        "cover_image": {
+          "id": 103,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/Cover-3.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/conversions/Cover-3-thumbnail.jpg"
+        },
+        "logo": {
+          "id": 102,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/Group-14405.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/conversions/Group-14405-thumbnail.jpg"
+        },
+        "is_active": 1,
+        "address": {
+          "zip": "37072",
+          "city": "Goodlettsville",
+          "state": "Tennessee",
+          "country": "USA",
+          "street_address": "3399 Buffalo Creek Road"
+        },
+        "settings": {
+          "contact": "0799302967",
+          "socials": [
+            {
+              "url": "https://www.facebook.com/lexirinc/",
+              "icon": "FacebookIcon"
+            },
+            {
+              "url": "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+              "icon": "YouTubeIcon"
+            }
+          ],
+          "website": "https://lexir.io/",
+          "location": []
+        },
+        "created_at": "2022-01-22T16:30:50.000000Z",
+        "updated_at": "2022-02-24T04:56:16.000000Z"
+      }
+    },
+    {
+      "id": 6,
+      "shop_id": 1,
+      "amount": 524,
+      "payment_method": null,
+      "status": "rejected",
+      "details": null,
+      "note": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T16:29:13.000Z",
+      "updated_at": "2022-03-05T15:37:08.000Z",
+      "shop": {
+        "id": 1,
+        "owner_id": 1,
+        "name": "Temper studios",
+        "slug": "temper-studios",
+        "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+        "cover_image": {
+          "id": 103,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/Cover-3.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/conversions/Cover-3-thumbnail.jpg"
+        },
+        "logo": {
+          "id": 102,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/Group-14405.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/conversions/Group-14405-thumbnail.jpg"
+        },
+        "is_active": 1,
+        "address": {
+          "zip": "37072",
+          "city": "Goodlettsville",
+          "state": "Tennessee",
+          "country": "USA",
+          "street_address": "3399 Buffalo Creek Road"
+        },
+        "settings": {
+          "contact": "0799302967",
+          "socials": [
+            {
+              "url": "https://www.facebook.com/lexirinc/",
+              "icon": "FacebookIcon"
+            },
+            {
+              "url": "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+              "icon": "YouTubeIcon"
+            }
+          ],
+          "website": "https://lexir.io/",
+          "location": []
+        },
+        "created_at": "2022-01-22T16:30:50.000000Z",
+        "updated_at": "2022-02-24T04:56:16.000000Z"
+      }
+    },
+    {
+      "id": 7,
+      "shop_id": 1,
+      "amount": 186,
+      "payment_method": null,
+      "status": "approved",
+      "details": null,
+      "note": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T16:29:13.000Z",
+      "updated_at": "2022-03-05T15:37:08.000Z",
+      "shop": {
+        "id": 1,
+        "owner_id": 1,
+        "name": "Temper studios",
+        "slug": "temper-studios",
+        "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+        "cover_image": {
+          "id": 103,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/Cover-3.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/conversions/Cover-3-thumbnail.jpg"
+        },
+        "logo": {
+          "id": 102,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/Group-14405.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/conversions/Group-14405-thumbnail.jpg"
+        },
+        "is_active": 1,
+        "address": {
+          "zip": "37072",
+          "city": "Goodlettsville",
+          "state": "Tennessee",
+          "country": "USA",
+          "street_address": "3399 Buffalo Creek Road"
+        },
+        "settings": {
+          "contact": "0799302967",
+          "socials": [
+            {
+              "url": "https://www.facebook.com/lexirinc/",
+              "icon": "FacebookIcon"
+            },
+            {
+              "url": "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+              "icon": "YouTubeIcon"
+            }
+          ],
+          "website": "https://lexir.io/",
+          "location": []
+        },
+        "created_at": "2022-01-22T16:30:50.000000Z",
+        "updated_at": "2022-02-24T04:56:16.000000Z"
+      }
+    },
+    {
+      "id": 8,
+      "shop_id": 1,
+      "amount": 232,
+      "payment_method": null,
+      "status": "rejected",
+      "details": null,
+      "note": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T16:29:13.000Z",
+      "updated_at": "2022-03-05T15:37:08.000Z",
+      "shop": {
+        "id": 1,
+        "owner_id": 1,
+        "name": "Temper studios",
+        "slug": "temper-studios",
+        "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+        "cover_image": {
+          "id": 103,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/Cover-3.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/103/conversions/Cover-3-thumbnail.jpg"
+        },
+        "logo": {
+          "id": 102,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/Group-14405.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/102/conversions/Group-14405-thumbnail.jpg"
+        },
+        "is_active": 1,
+        "address": {
+          "zip": "37072",
+          "city": "Goodlettsville",
+          "state": "Tennessee",
+          "country": "USA",
+          "street_address": "3399 Buffalo Creek Road"
+        },
+        "settings": {
+          "contact": "0799302967",
+          "socials": [
+            {
+              "url": "https://www.facebook.com/lexirinc/",
+              "icon": "FacebookIcon"
+            },
+            {
+              "url": "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+              "icon": "YouTubeIcon"
+            }
+          ],
+          "website": "https://lexir.io/",
+          "location": []
+        },
+        "created_at": "2022-01-22T16:30:50.000000Z",
+        "updated_at": "2022-02-24T04:56:16.000000Z"
+      }
+    }
+  ],
+  "total": 8,
+  "current_page": 1,
+  "count": 8,
+  "last_page": 1,
+  "first_item": 0,
+  "last_item": 7,
+  "per_page": "10",
+  "first_page_url": "https://mock.lexir.io/api/withdraws?limit=10&page=1",
+  "last_page_url": "https://mock.lexir.io/api/withdraws?limit=10&page=1",
+  "next_page_url": null,
+  "prev_page_url": null
+}

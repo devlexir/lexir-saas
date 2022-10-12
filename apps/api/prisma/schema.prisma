@@ -1,0 +1,518 @@
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  shadowDatabaseUrl    = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+model User {
+  id            Int       @id @default(autoincrement())
+  name          String?
+  username      String?
+  gh_username   String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+  sites         Site[]
+}
+
+model Account {
+  id                       Int     @id @default(autoincrement())
+  userId                   Int
+  type                     String
+  provider                 String
+  providerAccountId        String
+  refresh_token            String?
+  refresh_token_expires_in Int?
+  access_token             String?
+  expires_at               Int?
+  token_type               String?
+  scope                    String?
+  id_token                 String?
+  session_state            String?
+  oauth_token_secret       String?
+  oauth_token              String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           Int      @id @default(autoincrement())
+  sessionToken String   @unique
+  userId       Int
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  id         Int      @id @default(autoincrement())
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Site {
+  id            Int      @id @default(autoincrement())
+  name          String   @unique
+  description   String?
+  subdomain     String   @unique
+  customDomain  String?  @default("")
+  logo          String?
+  isCatalog     Boolean  @default(false)
+  isShop        Boolean  @default(false)
+  isCMS         Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  image         String?
+  imageBlurhash String?
+  user          User?    @relation(fields: [userId], references: [id])
+  userId        Int?
+  posts         Post[]
+}
+
+model Post {
+  id            Int      @id @default(autoincrement())
+  title         String?
+  description   String?
+  content       String?
+  slug          String   @default(cuid())
+  image         String?
+  imageBlurhash String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  published     Boolean  @default(false)
+  site          Site?    @relation(fields: [siteId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  siteId        Int?
+
+  @@unique([id, siteId], name: "post_site_constraint")
+}
+
+model Settings {
+  id Int @id @default(autoincrement())
+  // options SettingsOptions @relation(fields: [settingsOptionsID], references: [id])
+}
+
+model Category {
+  id      Int     @id @default(autoincrement())
+  name    String
+  slug    String?
+  icon    String
+  image   Json? //String[]
+  details String
+  parent  String?
+  type_id String?
+  // type    CategoryType[]
+}
+
+model Product {
+  subdomain                    String  @default("global")
+  id                           Int     @id @default(autoincrement())
+  name                         String
+  sku                          String  @unique
+  price                        String?
+  brand                        String?
+  category                     String?
+  size                         String?
+  abv                          String?
+  b2bprice                     String?
+  b2cprice                     String?
+  quantity                     String? @default("0")
+  imageSRC                     String?
+  slug                         String?
+  description                  String?
+  type_id                      Int?
+  shop_id                      Int?
+  sale_price                   Float?
+  min_price                    Float?
+  max_price                    Float?
+  preview_url                  String?
+  in_stock                     Int?
+  is_taxable                   Int?
+  shipping_class_id            Int?
+  status                       String? @default("draft")
+  product_type                 String?
+  unit                         String?
+  height                       String?
+  width                        String?
+  length                       String?
+  // video                        ProductVideo?
+  author_id                    Int?
+  manufacturer_id              Int?
+  is_digital                   Int?
+  is_external                  Int?
+  external_product_url         String?
+  external_product_button_text String?
+  orders_count                 Int?
+  total_downloads              Int?
+  product_status               String? @default("Not Validated")
+  // shop                         ProductShopInfo?
+  // type                         ProductTypeDeprecated?
+  // digital_file                 ProductDigitalFile?
+  Stock                        Stock?
+
+  published Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Order {
+  id                                    Int                  @unique @default(autoincrement())
+  subdomain                             String               @default("global")
+  order_lexir_id                        String               @unique
+  order_date                            DateTime?            @default(now())
+  order_lexir_id_order_customer         String               @unique
+  OrderCustomer                         OrderCustomer        @relation(fields: [order_lexir_id_order_customer], references: [order_lexir_id])
+  order_lexir_id_order_detail           String               @unique
+  OrderDetail                           OrderDetail          @relation(fields: [order_lexir_id_order_detail], references: [order_lexir_id])
+  order_lexir_id_order_shipping_address String               @unique
+  OrderShippingAddress                  OrderShippingAddress @relation(fields: [order_lexir_id_order_shipping_address], references: [order_lexir_id])
+  order_lexir_id_order_billing_address  String               @unique
+  OrderBillingAddress                   OrderBillingAddress  @relation(fields: [order_lexir_id_order_billing_address], references: [order_lexir_id])
+  OrderItem                             OrderItem[]
+  order_lexir_id_order_shipment         String?              @unique
+  OrderShipment                         OrderShipment?       @relation(fields: [order_lexir_id_order_shipment], references: [order_lexir_id])
+  order_lexir_id_order_payment          String?              @unique
+  OrderPayment                          OrderPayment?        @relation(fields: [order_lexir_id_order_payment], references: [order_lexir_id])
+  order_lexir_id_order_contact          String?              @unique
+  OrderContact                          OrderContact?        @relation(fields: [order_lexir_id_order_contact], references: [order_lexir_id])
+
+  //! Timestamp
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OrderCustomer {
+  id             Int     @id @default(autoincrement())
+  order_lexir_id String? @unique
+  customer_id    Int?
+  customer_type  String?
+  account_name   String?
+  first_name     String?
+  last_name      String?
+  email          String?
+  phone_number   String?
+  city           String?
+  Order          Order[]
+}
+
+model OrderItem {
+  id               Int     @id @default(autoincrement())
+  subdomain        String?
+  brand            String?
+  order_id         String?
+  sku              String?
+  qty              Int?
+  unit_price       Float?
+  discount_rate    Float?
+  price_w_discount Float?
+  vat              Float?
+  price_w_vat      Float?
+  total            Float?
+  gross_sales      Float?
+  product_name     String?
+  imageSRC         String?
+  year             Int?
+  month            Int?
+  Order            Order?  @relation(fields: [order_id], references: [order_lexir_id], onDelete: Cascade, onUpdate: Cascade)
+}
+
+model OrderDetail {
+  id             Int       @id @default(autoincrement())
+  order_lexir_id String    @unique
+  order_date     DateTime?
+  total          Float?    @default(0)
+  subtotal       Float?    @default(0)
+  vat            Float?
+  qty            Int?
+  status         Int?      @default(1)
+  Order          Order[]
+}
+
+model OrderShippingAddress {
+  id                Int     @id @default(autoincrement())
+  customer_id       Int     @default(0)
+  order_lexir_id    String  @unique
+  address_nickname  String?
+  shipping_address  String?
+  shipping_address2 String?
+  shipping_zip      String?
+  shipping_state    String?
+  shipping_country  String?
+  shipping_city     String?
+  Order             Order[]
+}
+
+model OrderBillingAddress {
+  id               Int     @id @default(autoincrement())
+  customer_id      Int     @default(0)
+  order_lexir_id   String  @unique
+  billing_name     String?
+  billing_phone    String?
+  billing_email    String?
+  billing_zip      String?
+  billing_state    String?
+  billing_country  String?
+  billing_city     String?
+  billing_address2 String?
+  billing_address  String?
+  Order            Order[]
+}
+
+model OrderShipment {
+  id               Int         @id @default(autoincrement())
+  order_lexir_id   String      @unique
+  WeekDay          WeekDay[]
+  TimeRange        TimeRange[]
+  shipment_carrier String?
+  shipment_date    DateTime?
+  shipment_cost    Float?
+  tracking_id      String?
+  Order            Order[]
+}
+
+model WeekDay {
+  id                Int           @id @default(autoincrement())
+  order_shipment_id Int
+  description       String
+  OrderShipment     OrderShipment @relation(fields: [order_shipment_id], references: [id])
+}
+
+model TimeRange {
+  id                Int           @id @default(autoincrement())
+  order_shipment_id Int
+  description       String
+  OrderShipment     OrderShipment @relation(fields: [order_shipment_id], references: [id])
+}
+
+model OrderPayment {
+  id             Int       @id @default(autoincrement())
+  order_lexir_id String    @unique
+  payment_method String?
+  payment_date   DateTime?
+  Order          Order[]
+}
+
+model OrderContact {
+  id             Int     @id @default(autoincrement())
+  order_lexir_id String  @unique
+  first_name     String?
+  last_name      String?
+  dial           String?
+  phone_number   String?
+  Order          Order[]
+}
+
+model Brand {
+  id                Int      @id @default(autoincrement())
+  subdomain         String   @default("global")
+  brand_id          Int?     @unique
+  brand_name        String?  @unique
+  country           String?  @default("NA")
+  commission        Float?   @default(0)
+  type_relationship String?  @default("NA")
+  plan              String?  @default("NA")
+  website           String?
+  logo_src          String?
+  // brandRequestAccountInfo BrandRequestAccountInfo?
+  brand_status      String?  @default("Not Validated")
+  published         Boolean  @default(false)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model Customer {
+  id                        Int               @id @default(autoincrement())
+  customer_id               Int?              @unique
+  customer_type             String?
+  account_name              String?
+  first_name                String?
+  last_name                 String?
+  email                     String?
+  phone_dial                String?
+  phone_number              String?
+  city                      String?
+  company_number            String?
+  company_document_filename String?
+  company_document_url      String?
+  contacts                  Contacts[]
+  shippingAddress           ShippingAddress[]
+  billingAddress            BillingAddress[]
+  customer_status           String?           @default("Not Validated")
+  createdAt                 DateTime          @default(now())
+  updatedAt                 DateTime          @updatedAt
+}
+
+model Contacts {
+  id          Int      @id @default(autoincrement())
+  customer_id Int?
+  first_name  String?
+  last_name   String?
+  number      String?
+  primary     Boolean? @default(false)
+
+  Customer Customer? @relation(fields: [customer_id], references: [customer_id])
+}
+
+model ShippingAddress {
+  id                Int      @id @default(autoincrement())
+  customer_id       Int?
+  address_nickname  String?
+  shipping_address  String?
+  shipping_address2 String?
+  shipping_zip      String?
+  shipping_state    String?
+  shipping_country  String?
+  shipping_city     String?
+  default           Boolean? @default(false)
+
+  Customer Customer? @relation(fields: [customer_id], references: [customer_id])
+}
+
+model BillingAddress {
+  id               Int     @id @default(autoincrement())
+  customer_id      Int
+  billing_name     String?
+  billing_phone    String?
+  billing_email    String?
+  billing_zip      String?
+  billing_state    String?
+  billing_country  String?
+  billing_city     String?
+  billing_address2 String?
+  billing_address  String?
+  default          Boolean @default(false)
+
+  Customer Customer? @relation(fields: [customer_id], references: [customer_id])
+}
+
+model Lead {
+  id                    Int      @id @default(autoincrement())
+  first_name            String?
+  last_name             String?
+  email                 String?
+  brand_name            String?
+  brand_city            String?
+  brand_country         String?
+  type_of_products      String?
+  which_markets         String?
+  how_about_us          String?
+  anything_else_message String?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model Type {
+  id   Int    @id @default(autoincrement())
+  name String
+  // settings            TypeSettings[]
+  slug String
+  icon String
+  // promotional_sliders String[]
+}
+
+// Relation for Brand, Order and Customer, used to get customer for each brand
+model RelBrandOrderCustomer {
+  id          Int      @id @default(autoincrement())
+  subdomain   String
+  order_id    Int
+  brand_id    Int
+  customer_id Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Relation for Brand and Customer, used to get customer for each brand
+model RelBrandOrderOrderItem {
+  id           Int      @id @default(autoincrement())
+  subdomain    String
+  order_id     Int
+  brand_id     Int
+  orderItem_id Int
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SystemUser {
+  id          Int      @id @default(autoincrement())
+  brand       String
+  username    String
+  email       String   @unique
+  password    String
+  permissions String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Payout {
+  id             Int      @id @default(autoincrement())
+  subdomain      String
+  brand          String
+  payout_period  String
+  status         String
+  reportFileName String
+  reportUrl      String   @db.LongText
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model PayoutPeriod {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  value     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PayoutStatus {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  value     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Stock {
+  id                      Int     @id @default(autoincrement())
+  subdomain               String
+  max_stock               Int     @default(0)
+  available_stock         Int     @default(0)
+  qty_last_top_up_amount  Int     @default(0)
+  available_percentage    Float   @default(100)
+  date_last_top_up_amount String?
+  status                  String
+
+  Product    Product @relation(fields: [product_id], references: [id])
+  product_id Int     @unique
+
+  StockEntry StockEntry[]
+}
+
+model StockEntry {
+  id          Int      @id @default(autoincrement())
+  subdomain   String
+  qty_top_up  Int
+  date_top_up DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Stock   Stock @relation(fields: [stockId], references: [id])
+  stockId Int
+}

@@ -1,0 +1,9 @@
+**/node_modules
+**.next
+**.env
+**.DS_Store
+**.vercel
+**.git
+yarn.lock
+package-lock.json
+**/_gen

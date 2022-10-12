@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Lead",
+    "value": "Lead"
+  },
+  {
+    "name": "Tasting",
+    "value": "Tasting"
+  },
+  {
+    "name": "First Buy",
+    "value": "First Buy"
+  },
+  {
+    "name": "Frequent Buyer",
+    "value": "Frequent Buyer"
+  },
+  {
+    "name": "Removed",
+    "value": "Removed"
+  }
+]

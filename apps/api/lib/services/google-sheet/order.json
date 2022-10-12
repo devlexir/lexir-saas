@@ -1,0 +1,462 @@
+{
+  "id": 1,
+  "tracking_number": "RnU0LGpR3EL3",
+  "customer_id": 3,
+  "customer_contact": "19365141641631",
+  "status": {
+    "id": 1,
+    "name": "Confirmed",
+    "serial": 1,
+    "color": "#0d9965",
+    "created_at": "2022-02-02T21:08:20.000000Z",
+    "updated_at": "2022-02-22T03:46:30.000000Z"
+  },
+  "amount": 94,
+  "sales_tax": 1.95,
+  "paid_total": 95.95,
+  "total": 95.95,
+  "coupon_id": null,
+  "parent_id": null,
+  "shop_id": null,
+  "discount": null,
+  "payment_id": "ch_3KX7jkBEtYX3PXpB05cnaKpe",
+  "payment_gateway": "STRIPE",
+  "shipping_address": null,
+  "billing_address": [],
+  "logistics_provider": null,
+  "delivery_fee": null,
+  "delivery_time": null,
+  "deleted_at": null,
+  "created_at": "2022-02-25T17:37:49.000Z",
+  "updated_at": "2022-02-25T17:37:49.000Z",
+  "customer": {
+    "id": 3,
+    "name": "Customer",
+    "email": "customer@demo.com",
+    "email_verified_at": null,
+    "created_at": "2022-02-02T11:00:07.000000Z",
+    "updated_at": "2022-02-02T11:00:07.000000Z",
+    "is_active": 1,
+    "shop_id": null
+  },
+  "products": [
+    {
+      "id": 45,
+      "name": "Novo Fogo",
+      "slug": "storyhub-wordpress-blog-theme-2",
+      "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+      "type_id": 1,
+      "price": 59,
+      "shop_id": 5,
+      "sale_price": 55,
+      "min_price": 59,
+      "max_price": 59,
+      "sku": "8978d7f9e7f/we*f7/7f/ew7*f/w7we*/fwfweffwe",
+      "preview_url": "https://themeforest.net/user/lexirteam/portfolio",
+      "quantity": 500,
+      "in_stock": 1,
+      "is_taxable": 0,
+      "shipping_class_id": null,
+      "status": "publish",
+      "product_type": "simple",
+      "unit": "1",
+      "height": null,
+      "width": null,
+      "length": null,
+      "image": {
+        "id": 369,
+        "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/369/Group-14289.png",
+        "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/369/conversions/Group-14289-thumbnail.jpg"
+      },
+      "video": null,
+      "gallery": [
+        {
+          "id": 370,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/370/Group-14289.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/370/conversions/Group-14289-thumbnail.jpg"
+        },
+        {
+          "id": 371,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/371/Rectangle-781.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/371/conversions/Rectangle-781-thumbnail.jpg"
+        },
+        {
+          "id": 372,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/372/Rectangle-782.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/372/conversions/Rectangle-782-thumbnail.jpg"
+        },
+        {
+          "id": 373,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/373/Rectangle-826.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/373/conversions/Rectangle-826-thumbnail.jpg"
+        }
+      ],
+      "deleted_at": null,
+      "created_at": "2022-01-27T17:31:12.000000Z",
+      "updated_at": "2022-02-03T13:23:00.000000Z",
+      "author_id": null,
+      "manufacturer_id": null,
+      "is_digital": 1,
+      "is_external": 0,
+      "external_product_url": null,
+      "external_product_button_text": null,
+      "total_downloads": 14,
+      "pivot": {
+        "order_id": 1,
+        "product_id": 45,
+        "order_quantity": "1",
+        "unit_price": 55,
+        "subtotal": 55,
+        "variation_option_id": null,
+        "created_at": "2022-02-25T17:37:49.000000Z",
+        "updated_at": "2022-02-25T17:37:49.000000Z"
+      },
+      "variation_options": [],
+      "digital_file": {
+        "id": 45,
+        "attachment_id": 374,
+        "url": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/523/cartsy-lite.1.4.6.zip",
+        "fileable_type": "Marvel\\Database\\Models\\Product",
+        "fileable_id": 45,
+        "created_at": "2022-01-27T17:31:12.000000Z",
+        "updated_at": "2022-02-03T13:23:00.000000Z"
+      }
+    },
+    {
+      "id": 49,
+      "name": "Erika",
+      "slug": "chawkbazar-laravel-flutter-mobile-app",
+      "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+      "type_id": 3,
+      "price": 39,
+      "shop_id": 7,
+      "sale_price": null,
+      "min_price": 39,
+      "max_price": 39,
+      "sku": "984a8sd4f89sd4f9s48s984v81a1v8df1v",
+      "preview_url": "https://themeforest.net/user/lexirteam/portfolio",
+      "quantity": 500,
+      "in_stock": 1,
+      "is_taxable": 0,
+      "shipping_class_id": null,
+      "status": "publish",
+      "product_type": "simple",
+      "unit": "1",
+      "height": null,
+      "width": null,
+      "length": null,
+      "image": {
+        "id": 394,
+        "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/394/Rectangle-773.png",
+        "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/394/conversions/Rectangle-773-thumbnail.jpg"
+      },
+      "video": null,
+      "gallery": [
+        {
+          "id": 395,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/395/Rectangle-773.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/395/conversions/Rectangle-773-thumbnail.jpg"
+        },
+        {
+          "id": 396,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/396/Rectangle-778.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/396/conversions/Rectangle-778-thumbnail.jpg"
+        },
+        {
+          "id": 397,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/397/Rectangle-782.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/397/conversions/Rectangle-782-thumbnail.jpg"
+        },
+        {
+          "id": 398,
+          "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/398/Rectangle-785.png",
+          "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/398/conversions/Rectangle-785-thumbnail.jpg"
+        }
+      ],
+      "deleted_at": null,
+      "created_at": "2022-01-27T17:37:27.000000Z",
+      "updated_at": "2022-02-03T13:22:37.000000Z",
+      "author_id": null,
+      "manufacturer_id": null,
+      "is_digital": 1,
+      "is_external": 0,
+      "external_product_url": null,
+      "external_product_button_text": null,
+      "total_downloads": 50,
+      "pivot": {
+        "order_id": 1,
+        "product_id": 49,
+        "order_quantity": "1",
+        "unit_price": 39,
+        "subtotal": 39,
+        "variation_option_id": null,
+        "created_at": "2022-02-25T17:37:49.000000Z",
+        "updated_at": "2022-02-25T17:37:49.000000Z"
+      },
+      "variation_options": [],
+      "digital_file": {
+        "id": 49,
+        "attachment_id": 399,
+        "url": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/523/cartsy-lite.1.4.6.zip",
+        "fileable_type": "Marvel\\Database\\Models\\Product",
+        "fileable_id": 49,
+        "created_at": "2022-01-27T17:37:27.000000Z",
+        "updated_at": "2022-02-03T13:22:37.000000Z"
+      }
+    }
+  ],
+  "children": [
+    {
+      "id": 2,
+      "tracking_number": "6ywonlJ1qcOl",
+      "customer_id": 3,
+      "customer_contact": "19365141641631",
+      "status": {
+        "id": 1,
+        "name": "Confirmed",
+        "serial": 1,
+        "color": "#0d9965",
+        "created_at": "2022-02-02T21:08:20.000000Z",
+        "updated_at": "2022-02-22T03:46:30.000000Z"
+      },
+      "amount": 39,
+      "sales_tax": 0,
+      "paid_total": 39,
+      "total": 39,
+      "coupon_id": null,
+      "parent_id": 1,
+      "shop_id": 7,
+      "discount": 0,
+      "payment_id": null,
+      "payment_gateway": null,
+      "shipping_address": null,
+      "billing_address": [],
+      "logistics_provider": null,
+      "delivery_fee": 0,
+      "delivery_time": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T17:37:49.000000Z",
+      "updated_at": "2022-02-25T17:37:49.000000Z",
+      "customer": {
+        "id": 3,
+        "name": "Customer",
+        "email": "customer@demo.com",
+        "email_verified_at": null,
+        "created_at": "2022-02-02T11:00:07.000000Z",
+        "updated_at": "2022-02-02T11:00:07.000000Z",
+        "is_active": 1,
+        "shop_id": null
+      },
+      "products": [
+        {
+          "id": 49,
+          "name": "Erika",
+          "slug": "chawkbazar-laravel-flutter-mobile-app",
+          "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+          "type_id": 3,
+          "price": 39,
+          "shop_id": 7,
+          "sale_price": null,
+          "min_price": 39,
+          "max_price": 39,
+          "sku": "984a8sd4f89sd4f9s48s984v81a1v8df1v",
+          "preview_url": "https://themeforest.net/user/lexirteam/portfolio",
+          "quantity": 500,
+          "in_stock": 1,
+          "is_taxable": 0,
+          "shipping_class_id": null,
+          "status": "publish",
+          "product_type": "simple",
+          "unit": "1",
+          "height": null,
+          "width": null,
+          "length": null,
+          "image": {
+            "id": 394,
+            "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/394/Rectangle-773.png",
+            "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/394/conversions/Rectangle-773-thumbnail.jpg"
+          },
+          "video": null,
+          "gallery": [
+            {
+              "id": 395,
+              "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/395/Rectangle-773.png",
+              "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/395/conversions/Rectangle-773-thumbnail.jpg"
+            },
+            {
+              "id": 396,
+              "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/396/Rectangle-778.png",
+              "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/396/conversions/Rectangle-778-thumbnail.jpg"
+            },
+            {
+              "id": 397,
+              "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/397/Rectangle-782.png",
+              "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/397/conversions/Rectangle-782-thumbnail.jpg"
+            },
+            {
+              "id": 398,
+              "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/398/Rectangle-785.png",
+              "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/398/conversions/Rectangle-785-thumbnail.jpg"
+            }
+          ],
+          "deleted_at": null,
+          "created_at": "2022-01-27T17:37:27.000000Z",
+          "updated_at": "2022-02-03T13:22:37.000000Z",
+          "author_id": null,
+          "manufacturer_id": null,
+          "is_digital": 1,
+          "is_external": 0,
+          "external_product_url": null,
+          "external_product_button_text": null,
+          "total_downloads": 50,
+          "pivot": {
+            "order_id": 2,
+            "product_id": 49,
+            "order_quantity": "1",
+            "unit_price": 39,
+            "subtotal": 39,
+            "variation_option_id": null,
+            "created_at": "2022-02-25T17:37:49.000000Z",
+            "updated_at": "2022-02-25T17:37:49.000000Z"
+          },
+          "variation_options": [],
+          "digital_file": {
+            "id": 49,
+            "attachment_id": 399,
+            "url": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/523/cartsy-lite.1.4.6.zip",
+            "fileable_type": "Marvel\\Database\\Models\\Product",
+            "fileable_id": 49,
+            "created_at": "2022-01-27T17:37:27.000000Z",
+            "updated_at": "2022-02-03T13:22:37.000000Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tracking_number": "aL71ZetnCHDd",
+      "customer_id": 3,
+      "customer_contact": "19365141641631",
+      "status": {
+        "id": 1,
+        "name": "Confirmed",
+        "serial": 1,
+        "color": "#0d9965",
+        "created_at": "2022-02-02T21:08:20.000000Z",
+        "updated_at": "2022-02-22T03:46:30.000000Z"
+      },
+      "amount": 55,
+      "sales_tax": 0,
+      "paid_total": 55,
+      "total": 55,
+      "coupon_id": null,
+      "parent_id": 1,
+      "shop_id": 5,
+      "discount": 0,
+      "payment_id": null,
+      "payment_gateway": null,
+      "shipping_address": null,
+      "billing_address": [],
+      "logistics_provider": null,
+      "delivery_fee": 0,
+      "delivery_time": null,
+      "deleted_at": null,
+      "created_at": "2022-02-25T17:37:49.000000Z",
+      "updated_at": "2022-02-25T17:37:49.000000Z",
+      "customer": {
+        "id": 3,
+        "name": "Customer",
+        "email": "customer@demo.com",
+        "email_verified_at": null,
+        "created_at": "2022-02-02T11:00:07.000000Z",
+        "updated_at": "2022-02-02T11:00:07.000000Z",
+        "is_active": 1,
+        "shop_id": null
+      },
+      "products": [
+        {
+          "id": 45,
+          "name": "Novo Fogo",
+          "slug": "storyhub-wordpress-blog-theme-2",
+          "description": "Along With Wordpress Themes & Plugins, We always try to use latest trending techs like React, Next Js, Gatsby Js, GraphQl, Shopify etc to make our products special. Our rich tech choice will help you to build high performance applications. We are also known to provide great customer supports to our customers.",
+          "type_id": 1,
+          "price": 59,
+          "shop_id": 5,
+          "sale_price": 55,
+          "min_price": 59,
+          "max_price": 59,
+          "sku": "8978d7f9e7f/we*f7/7f/ew7*f/w7we*/fwfweffwe",
+          "preview_url": "https://themeforest.net/user/lexirteam/portfolio",
+          "quantity": 500,
+          "in_stock": 1,
+          "is_taxable": 0,
+          "shipping_class_id": null,
+          "status": "publish",
+          "product_type": "simple",
+          "unit": "1",
+          "height": null,
+          "width": null,
+          "length": null,
+          "image": {
+            "id": 369,
+            "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/369/Group-14289.png",
+            "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/369/conversions/Group-14289-thumbnail.jpg"
+          },
+          "video": null,
+          "gallery": [
+            {
+              "id": 370,
+              "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/370/Group-14289.png",
+              "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/370/conversions/Group-14289-thumbnail.jpg"
+            },
+            {
+              "id": 371,
+              "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/371/Rectangle-781.png",
+              "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/371/conversions/Rectangle-781-thumbnail.jpg"
+            },
+            {
+              "id": 372,
+              "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/372/Rectangle-782.png",
+              "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/372/conversions/Rectangle-782-thumbnail.jpg"
+            },
+            {
+              "id": 373,
+              "original": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/373/Rectangle-826.png",
+              "thumbnail": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/373/conversions/Rectangle-826-thumbnail.jpg"
+            }
+          ],
+          "deleted_at": null,
+          "created_at": "2022-01-27T17:31:12.000000Z",
+          "updated_at": "2022-02-03T13:23:00.000000Z",
+          "author_id": null,
+          "manufacturer_id": null,
+          "is_digital": 1,
+          "is_external": 0,
+          "external_product_url": null,
+          "external_product_button_text": null,
+          "total_downloads": 14,
+          "pivot": {
+            "order_id": 3,
+            "product_id": 45,
+            "order_quantity": "1",
+            "unit_price": 55,
+            "subtotal": 55,
+            "variation_option_id": null,
+            "created_at": "2022-02-25T17:37:49.000000Z",
+            "updated_at": "2022-02-25T17:37:49.000000Z"
+          },
+          "variation_options": [],
+          "digital_file": {
+            "id": 45,
+            "attachment_id": 374,
+            "url": "https://pixarlaravel.s3.ap-southeast-1.amazonaws.com/523/cartsy-lite.1.4.6.zip",
+            "fileable_type": "Marvel\\Database\\Models\\Product",
+            "fileable_id": 45,
+            "created_at": "2022-01-27T17:31:12.000000Z",
+            "updated_at": "2022-02-03T13:23:00.000000Z"
+          }
+        }
+      ]
+    }
+  ]
+}

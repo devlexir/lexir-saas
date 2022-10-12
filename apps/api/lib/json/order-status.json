@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "New",
+    "serial": 1,
+    "color": "#0d9965"
+  },
+  {
+    "id": 2,
+    "name": "Processing",
+    "serial": 2,
+    "color": "#0d9965"
+  },
+  {
+    "id": 3,
+    "name": "In Transit",
+    "serial": 3,
+    "color": "#0d9965"
+  },
+  {
+    "id": 4,
+    "name": "Delivered",
+    "serial": 4,
+    "color": "#64acd8"
+  },
+  {
+    "id": 5,
+    "name": "Paid",
+    "serial": 5,
+    "color": "#eacb34"
+  },
+  {
+    "id": 6,
+    "name": "Canceled",
+    "serial": 6,
+    "color": "#eacb34"
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Aperitif",
+      "slug": "aperitif",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/fresh-vegetables.png",
+        "original": "/assets/images/category/fresh-vegetables.png"
+      },
+      "icon": "/assets/images/category/icon/fresh-vegetables.svg"
+    },
+    {
+      "id": 2,
+      "name": "Aquavit",
+      "slug": "aquavit",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/diet-foods.png",
+        "original": "/assets/images/category/diet-foods.png"
+      },
+      "icon": "/assets/images/category/icon/diet-foods.svg"
+    },
+    {
+      "id": 3,
+      "name": "Armagnac",
+      "slug": "armagnac",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/fast-food.png",
+        "original": "/assets/images/category/fast-food.png"
+      },
+      "icon": "/assets/images/category/icon/fast-food.svg"
+    },
+    {
+      "id": 4,
+      "name": "Gin",
+      "slug": "gin",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/fruits-items.png",
+        "original": "/assets/images/category/fruits-items.png"
+      },
+      "icon": "/assets/images/category/icon/fruits-items.svg"
+    },
+    {
+      "id": 5,
+      "name": "Ready to Drink",
+      "slug": "ready-to-drink",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/healthy-foods.png",
+        "original": "/assets/images/category/healthy-foods.png"
+      },
+      "icon": "/assets/images/category/icon/healthy-foods.svg"
+    },
+    {
+      "id": 6,
+      "name": "Rum",
+      "slug": "rum",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/grocery-items.png",
+        "original": "/assets/images/category/grocery-items.png"
+      },
+      "icon": "/assets/images/category/icon/grocery-items.svg"
+    },
+    {
+      "id": 7,
+      "name": "Vermouth",
+      "slug": "vermouth",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/quality-milk.png",
+        "original": "/assets/images/category/quality-milk.png"
+      },
+      "icon": "/assets/images/category/icon/quality-milk.svg"
+    },
+    {
+      "id": 8,
+      "name": "Vodka",
+      "slug": "vodka",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/diet-nutrition.png",
+        "original": "/assets/images/category/diet-nutrition.png"
+      },
+      "icon": "/assets/images/category/icon/diet-nutrition.svg"
+    },
+    {
+      "id": 9,
+      "name": "Whisky",
+      "slug": "whisky",
+      "image": {
+        "id": 1,
+        "thumbnail": "/assets/images/category/cold-drinks.png",
+        "original": "/assets/images/category/cold-drinks.png"
+      },
+      "icon": "/assets/images/category/icon/cold-drinks.svg"
+    }
+  ]
+}
