@@ -1,7 +1,7 @@
 ## Getting Started
 
-_yarn install_
-_yarn run dev_
+- yarn install
+- yarn run dev
 
 ## Authors
 
