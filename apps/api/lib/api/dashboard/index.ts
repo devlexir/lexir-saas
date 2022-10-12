@@ -49,6 +49,7 @@ export async function widgets(
     } else {
       const total_revenue = await prisma.orderItem.aggregate({
         where: {
+          //@ts-ignore
           subdomain: req.query.subdomain,
         },
         _sum: {
@@ -58,6 +59,7 @@ export async function widgets(
 
       const total_bottles = await prisma.orderItem.aggregate({
         where: {
+          //@ts-ignore
           subdomain: req.query.subdomain,
         },
         _sum: {
@@ -69,6 +71,7 @@ export async function widgets(
         where: {
           OrderItem: {
             some: {
+              //@ts-ignore
               subdomain: req.query.subdomain,
             },
           },
@@ -79,10 +82,11 @@ export async function widgets(
       });
 
       return res.status(200).json({
+        //@ts-ignore
         total_revenue: total_revenue._sum.total?.toFixed(0),
-
+        //@ts-ignore
         total_bottles: total_bottles._sum.qty,
-
+        //@ts-ignore
         total_orders: total_orders._count.order_lexir_id,
       });
     }
@@ -105,6 +109,7 @@ export async function salesHistory(
     } else {
       ordersItens = await prisma.orderItem.findMany({
         where: {
+          //@ts-ignore
           subdomain: req.query.subdomain,
         },
       });
@@ -258,6 +263,7 @@ export async function topProducts(
         total: true,
       },
       where: {
+        //@ts-ignore
         subdomain: req.query.subdomain,
       },
       orderBy: {
@@ -273,6 +279,7 @@ export async function topProducts(
         qty: true,
       },
       where: {
+        //@ts-ignore
         subdomain: req.query.subdomain,
       },
       orderBy: {
@@ -286,7 +293,7 @@ export async function topProducts(
   var sales = itensSales.slice(0, 5).map((item) => {
     return {
       x: item.product_name,
-
+      //@ts-ignore
       y: item._sum.total?.toFixed(0),
     };
   });
@@ -294,7 +301,7 @@ export async function topProducts(
   var bottles = itensQty.slice(0, 5).map((item) => {
     return {
       x: item.product_name,
-
+      //@ts-ignore
       y: item._sum.qty?.toFixed(0),
     };
   });
@@ -318,7 +325,7 @@ export async function b2bVSb2c(
     INNER JOIN lexir.OrderCustomer as ORDERCUSTOMER
     ON ITENS.order_id = ORDERCUSTOMER.order_lexir_id
     WHERE ORDERCUSTOMER.customer_type = 'B2B'`;
-
+    //@ts-ignore
     ordersB2BSales = ordersB2BSales[0] ? ordersB2BSales[0].total : 0;
 
     ordersB2CSales =
@@ -326,7 +333,7 @@ export async function b2bVSb2c(
     INNER JOIN lexir.OrderCustomer as ORDERCUSTOMER
     ON ITENS.order_id = ORDERCUSTOMER.order_lexir_id
     WHERE ORDERCUSTOMER.customer_type = 'B2C'`;
-
+    //@ts-ignore
     ordersB2CSales = ordersB2CSales[0] ? ordersB2CSales[0].total : 0;
 
     ordersB2BBottles =
@@ -334,7 +341,7 @@ export async function b2bVSb2c(
     INNER JOIN lexir.OrderCustomer as ORDERCUSTOMER
     ON ITENS.order_id = ORDERCUSTOMER.order_lexir_id
     WHERE ORDERCUSTOMER.customer_type = 'B2B'`;
-
+    //@ts-ignore
     ordersB2BBottles = ordersB2BBottles[0] ? ordersB2BBottles[0].qty : 0;
 
     ordersB2CBottles =
@@ -342,7 +349,7 @@ export async function b2bVSb2c(
     INNER JOIN lexir.OrderCustomer as ORDERCUSTOMER
     ON ITENS.order_id = ORDERCUSTOMER.order_lexir_id
     WHERE ORDERCUSTOMER.customer_type = 'B2C'`;
-
+    //@ts-ignore
     ordersB2CBottles = ordersB2CBottles[0] ? ordersB2CBottles[0].qty : 0;
   } else {
     ordersB2BSales =
@@ -350,7 +357,7 @@ export async function b2bVSb2c(
       INNER JOIN lexir.OrderCustomer as ORDERCUSTOMER
       ON ITENS.order_id = ORDERCUSTOMER.order_lexir_id
       WHERE ITENS.subdomain = ${req.query.subdomain} AND ORDERCUSTOMER.customer_type = 'B2B'`;
-
+    //@ts-ignore
     ordersB2BSales = ordersB2BSales[0] ? ordersB2BSales[0].total : 0;
 
     ordersB2CSales =
@@ -358,7 +365,7 @@ export async function b2bVSb2c(
       INNER JOIN lexir.OrderCustomer as ORDERCUSTOMER
       ON ITENS.order_id = ORDERCUSTOMER.order_lexir_id
       WHERE ITENS.subdomain = ${req.query.subdomain} AND ORDERCUSTOMER.customer_type = 'B2C'`;
-
+    //@ts-ignore
     ordersB2CSales = ordersB2CSales[0] ? ordersB2CSales[0].total : 0;
 
     ordersB2BBottles =
@@ -366,7 +373,7 @@ export async function b2bVSb2c(
       INNER JOIN lexir.OrderCustomer as ORDERCUSTOMER
       ON ITENS.order_id = ORDERCUSTOMER.order_lexir_id
       WHERE ITENS.subdomain = ${req.query.subdomain} AND ORDERCUSTOMER.customer_type = 'B2B'`;
-
+    //@ts-ignore
     ordersB2BBottles = ordersB2BBottles[0] ? ordersB2BBottles[0].qty : 0;
 
     ordersB2CBottles =
@@ -374,16 +381,16 @@ export async function b2bVSb2c(
       INNER JOIN lexir.OrderCustomer as ORDERCUSTOMER
       ON ITENS.order_id = ORDERCUSTOMER.order_lexir_id
       WHERE ITENS.subdomain = ${req.query.subdomain} AND ORDERCUSTOMER.customer_type = 'B2C'`;
-
+    //@ts-ignore
     ordersB2CBottles = ordersB2CBottles[0] ? ordersB2CBottles[0].qty : 0;
   }
-
+  //@ts-ignore
   ordersB2BSales = ordersB2BSales === null ? 0 : ordersB2BSales;
-
+  //@ts-ignore
   ordersB2CSales = ordersB2CSales === null ? 0 : ordersB2CSales;
-
+  //@ts-ignore
   ordersB2BBottles = ordersB2BBottles === null ? 0 : ordersB2BBottles;
-
+  //@ts-ignore
   ordersB2CBottles = ordersB2CBottles === null ? 0 : ordersB2CBottles;
 
   try {

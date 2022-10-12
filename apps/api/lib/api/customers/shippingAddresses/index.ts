@@ -14,6 +14,7 @@ export async function getShippingAddress(
   try {
     const shippingAddress = await prisma.shippingAddress.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.shippingAddressID),
       },
     });
@@ -35,6 +36,7 @@ export async function getShippingAddresses(
     let addresses = [];
     addresses = await prisma.customer.findMany({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.customerID),
       },
       select: {
@@ -100,6 +102,7 @@ export async function updateShippingAddress(
   try {
     const customer = await prisma.shippingAddress.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.shippingAddressID),
       },
       data: {
@@ -132,6 +135,7 @@ export async function deleteShippingAddress(
     await prisma.$transaction([
       prisma.shippingAddress.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.shippingAddressID),
         },
       }),

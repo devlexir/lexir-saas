@@ -25,6 +25,12 @@
       "@/types/*": ["types/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_app.tsx.old"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/_app.tsx.old",
+    "prisma/seed.mjs"
+  ],
   "exclude": ["node_modules"]
 }

@@ -175,6 +175,7 @@ export async function updateSite(
   try {
     const response = await prisma.site.update({
       where: {
+        //@ts-ignore
         id: req.query.id.toString(),
       },
       data: {
@@ -206,6 +207,7 @@ export async function deleteSite(
     await prisma.$transaction([
       prisma.category.delete({
         where: {
+          //@ts-ignore
           id: req.query.id.toString(),
         },
       }),

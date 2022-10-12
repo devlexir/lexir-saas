@@ -34,6 +34,7 @@ export async function getStock(
   try {
     let stock = await prisma.stock.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
       include: {
@@ -59,6 +60,7 @@ export async function getStocks(
   try {
     let stocks = await prisma.product.findMany({
       where: {
+        //@ts-ignore
         subdomain: req.query.subdomain,
       },
     });
@@ -187,6 +189,7 @@ export async function updateStock(
   try {
     const response = await prisma.stock.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
       data: {
@@ -212,6 +215,7 @@ export async function deleteStock(
     await prisma.$transaction([
       prisma.stock.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.id),
         },
       }),

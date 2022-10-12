@@ -13,6 +13,7 @@ export async function getBillingAddress(
   try {
     const billingAddress = await prisma.billingAddress.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.billingAddressID),
       },
     });
@@ -34,6 +35,7 @@ export async function getBillingAddresses(
     let addresses = [];
     addresses = await prisma.customer.findMany({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.customerID),
       },
       select: {
@@ -99,6 +101,7 @@ export async function updateBillingAddress(
   try {
     const customer = await prisma.billingAddress.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.billingAddressID),
       },
       data: {
@@ -133,6 +136,7 @@ export async function deleteBillingAddress(
     await prisma.$transaction([
       prisma.billingAddress.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.billingAddressID),
         },
       }),

@@ -1,9 +1,8 @@
 import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
-
+import * as bcrypt from "bcrypt";
 import moment from "moment";
 
-import * as bcrypt from "bcrypt";
+const prisma = new PrismaClient();
 
 async function main() {
   await prisma.payoutStatus.deleteMany({});

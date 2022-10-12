@@ -22,7 +22,7 @@ export async function createPart(
   try {
     let { name, type } = req.body;
     const keyName = `${process.env.S3_BUCKET_FOLDER_NAME}/${name}`;
-
+    //@ts-ignore
     let multipartCreateResult = await s3
       .createMultipartUpload({
         Bucket: process.env.S3_BUCKET_NAME,

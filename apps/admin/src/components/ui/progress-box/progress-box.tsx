@@ -3,8 +3,6 @@ import Scrollbar from '@components/ui/scrollbar';
 
 import cn from 'classnames';
 
-import styles from './progress-box.module.css';
-
 type ProgressProps = {
   data: any[] | undefined;
   status: number;
@@ -32,8 +30,7 @@ const ProgressBox: React.FC<ProgressProps> = ({ status, data }) => {
           >
             <div
               className={cn(
-                'relative mb-4 flex w-full items-center justify-center',
-                status >= item.id ? styles.checked : ''
+                'relative mb-4 flex w-full items-center justify-center'
               )}
             >
               <div

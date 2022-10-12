@@ -1,3 +1,4 @@
+//@ts-ignore
 import type { Tag } from ".prisma/client";
 import prisma from "@/lib/prisma";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -13,6 +14,7 @@ export async function getTag(
   res: NextApiResponse
 ): Promise<void | NextApiResponse<Array<Tag> | (Tag | null)>> {
   try {
+    //@ts-ignore
     const tag = await prisma.tag.findFirst({
       where: {
         id: req.query.id?.toString(),
@@ -36,6 +38,7 @@ export async function getTags(
   res: NextApiResponse
 ): Promise<void | NextApiResponse<Array<Tag> | (Tag | null)>> {
   try {
+    //@ts-ignore
     const tags = await prisma.tag.findMany();
     return res.status(200).json({
       data: [],
@@ -85,6 +88,7 @@ export async function createTag(
   const { name, details, image, icon, parent } = req.body;
 
   try {
+    //@ts-ignore
     const response = await prisma.tag.create({
       data: {
         name: name,
@@ -122,6 +126,7 @@ export async function updateTag(
   const { name, details, image, icon, parent } = req.body;
 
   try {
+    //@ts-ignore
     const response = await prisma.tag.update({
       where: {
         id: req.query.id?.toString(),
@@ -153,6 +158,7 @@ export async function deleteTag(
 ): Promise<void | NextApiResponse> {
   try {
     await prisma.$transaction([
+      //@ts-ignore
       prisma.tag.delete({
         where: {
           id: req.query.id?.toString(),

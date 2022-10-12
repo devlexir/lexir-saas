@@ -16,6 +16,9 @@
     "start": "next start",
     "type-check": "tsc"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.mjs"
+  },
   "dependencies": {
     "@headlessui/react": "^1.4.3",
     "@next-auth/prisma-adapter": "^1.0.1",
@@ -47,10 +50,10 @@
     "next-plausible": "^3.1.4",
     "next-swagger-doc": "^0.3.4",
     "plaiceholder": "^2.2.0",
-    "react": "^17.0.2",
+    "react": "^18.1.0",
     "react-confetti": "^6.0.1",
     "react-cool-inview": "^2.0.9",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.1.0",
     "react-hot-toast": "^2.2.0",
     "react-icons": "^4.3.1",
     "react-minisearch": "^5.0.0-beta1",

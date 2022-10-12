@@ -1,3 +1,4 @@
+//@ts-ignore
 import type { OnboardingBrand } from ".prisma/client";
 import prisma from "@/lib/prisma";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -8,6 +9,7 @@ export async function changeStatusOnboardingBrand(
 ): Promise<void | NextApiResponse<OnboardingBrand>> {
   console.log(req.body);
   try {
+    //@ts-ignore
     const response = await prisma.onboardingBrand.update({
       where: {
         id: req.query.id,

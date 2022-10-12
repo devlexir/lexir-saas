@@ -15,6 +15,7 @@ export async function getCategory(
   try {
     const category = await prisma.category.findFirst({
       where: {
+        //@ts-ignore
         id: req.query.id,
       },
     });
@@ -128,6 +129,7 @@ export async function updateCategory(
   try {
     const response = await prisma.category.update({
       where: {
+        //@ts-ignore
         id: req.query.id,
       },
       data: {
@@ -163,6 +165,7 @@ export async function deleteCategory(
     await prisma.$transaction([
       prisma.category.delete({
         where: {
+          //@ts-ignore
           id: req.query.id,
         },
       }),

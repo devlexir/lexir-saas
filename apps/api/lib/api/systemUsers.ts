@@ -16,6 +16,7 @@ export async function getSystemUser(
         email: true,
       },
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
     });
@@ -125,6 +126,7 @@ export async function updateSystemUser(
         email: true,
       },
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
       data: {
@@ -149,6 +151,7 @@ export async function deleteSystemUser(
     await prisma.$transaction([
       prisma.systemUser.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.id),
         },
       }),

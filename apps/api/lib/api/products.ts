@@ -10,6 +10,7 @@ export async function getProduct(
   try {
     const product = await prisma.product.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
     });
@@ -32,24 +33,28 @@ export async function getProducts(
       products = await prisma.product.findMany({
         where: {
           brand: {
+            //@ts-ignore
             contains:
               req.query.brandFilterProducts === ""
                 ? undefined
                 : req.query.brandFilterProducts,
           },
           category: {
+            //@ts-ignore
             contains:
               req.query.categoryFilterProducts === ""
                 ? undefined
                 : req.query.categoryFilterProducts,
           },
           sku: {
+            //@ts-ignore
             contains:
               req.query.skuFilterProducts === ""
                 ? undefined
                 : req.query.skuFilterProducts,
           },
           name: {
+            //@ts-ignore
             contains:
               req.query.productNameFilterProducts === ""
                 ? undefined
@@ -65,7 +70,7 @@ export async function getProducts(
     } else {
       console.log(
         req.query.published === undefined
-          ? null
+          ? null //@ts-ignore
           : !falsy.test(req.query.published) && !!req.query.published
       );
       products = await prisma.product.findMany({
@@ -73,7 +78,7 @@ export async function getProducts(
           subdomain: req.query.subdomain.toString(),
           published:
             req.query.published === undefined
-              ? undefined
+              ? undefined //@ts-ignore
               : !falsy.test(req.query.published) && !!req.query.published,
         },
         orderBy: [
@@ -136,6 +141,7 @@ export async function updateProduct(
   try {
     const response = await prisma.product.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
       data: {
@@ -170,6 +176,7 @@ export async function deleteProduct(
     await prisma.$transaction([
       prisma.product.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.id),
         },
       }),

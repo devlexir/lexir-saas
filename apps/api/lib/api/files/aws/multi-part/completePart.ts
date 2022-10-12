@@ -30,7 +30,7 @@ export async function completePart(
         Parts: parts,
       },
     };
-
+    //@ts-ignore
     const data = await s3.completeMultipartUpload(params).promise();
 
     const newFile = {

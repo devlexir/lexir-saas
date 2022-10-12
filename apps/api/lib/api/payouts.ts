@@ -21,6 +21,7 @@ export async function getPayout(
   try {
     const payout = await prisma.payout.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
     });
@@ -194,6 +195,7 @@ export async function updatePayout(
 
     const response = await prisma.payout.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
       data: {
@@ -221,6 +223,7 @@ export async function deletePayout(
     await prisma.$transaction([
       prisma.payout.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.id),
         },
       }),

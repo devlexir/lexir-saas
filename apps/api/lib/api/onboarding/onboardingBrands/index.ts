@@ -1,3 +1,4 @@
+//@ts-ignore
 import type { OnboardingBrand } from ".prisma/client";
 import prisma from "@/lib/prisma";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -10,7 +11,7 @@ export async function getOnboardingBrand(
 >> {
   try {
     console.log(req.query.id);
-
+    //@ts-ignore
     const brand = await prisma.onboardingBrand.findFirst({
       where: {
         id: req.query.id,
@@ -31,7 +32,7 @@ export async function getOnboardingBrands(
 >> {
   try {
     let brands = [];
-
+    //@ts-ignore
     brands = await prisma.onboardingBrand.findMany({
       orderBy: [
         {
@@ -69,6 +70,7 @@ export async function createOnboardingBrand(
   OnboardingBrandID: string;
 }>> {
   try {
+    //@ts-ignore
     const response = await prisma.onboardingBrand.create({
       data: {
         subdomain: req.body.subdomain || "global",
@@ -127,6 +129,7 @@ export async function updateOnboardingBrand(
   console.log(req.query);
   console.log(req.body);
   try {
+    //@ts-ignore
     const response = await prisma.onboardingBrand.update({
       where: {
         id: req.query.id,
@@ -190,6 +193,7 @@ export async function deleteOnboardingBrand(
 ): Promise<void | NextApiResponse> {
   try {
     await prisma.$transaction([
+      //@ts-ignore
       prisma.onboardingBrand.delete({
         where: {
           id: req.query.id,

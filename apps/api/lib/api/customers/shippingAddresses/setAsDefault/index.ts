@@ -13,6 +13,7 @@ export async function setAsDefaultShippingAddress(
   try {
     const shippingAddress = await prisma.shippingAddress.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.shippingAddressID),
       },
     });
@@ -20,6 +21,7 @@ export async function setAsDefaultShippingAddress(
     // Every addresses to default false
     await prisma.shippingAddress.updateMany({
       where: {
+        //@ts-ignore
         customer_id: parseInt(shippingAddress?.customer_id),
       },
       data: {
@@ -29,6 +31,7 @@ export async function setAsDefaultShippingAddress(
 
     await prisma.shippingAddress.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.shippingAddressID),
       },
       data: {

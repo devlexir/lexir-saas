@@ -10,6 +10,7 @@ export async function getCustomer(
   try {
     const customer = await prisma.customer.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.customerID),
       },
       include: {
@@ -125,6 +126,7 @@ export async function updateCustomer(
     console.log(req.body.phone_dial);
     const response = await prisma.customer.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.customerID),
       },
       data: {
@@ -159,6 +161,7 @@ export async function deleteCustomer(
     await prisma.$transaction([
       prisma.customer.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.id),
         },
       }),

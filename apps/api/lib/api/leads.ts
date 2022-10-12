@@ -16,6 +16,7 @@ export async function getLead(
     console.log(req.query.id);
     const lead = await prisma.lead.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
     });
@@ -51,7 +52,7 @@ function appendLead(data: any) {
         range: sheetInfo.range,
         valueInputOption: "RAW",
         insertDataOption: "INSERT_ROWS",
-
+        //@ts-ignore
         resource: {
           values: [
             [
@@ -125,6 +126,7 @@ export async function updateLead(
   try {
     const response = await prisma.lead.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
       data: {
@@ -158,6 +160,7 @@ export async function deleteLead(
     await prisma.$transaction([
       prisma.lead.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.id),
         },
       }),

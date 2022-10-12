@@ -9,6 +9,7 @@ export async function getBrand(
   try {
     const brand = await prisma.brand.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
     });
@@ -108,6 +109,7 @@ export async function updateBrand(
   try {
     const response = await prisma.brand.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.id),
       },
       data: {
@@ -137,6 +139,7 @@ export async function deleteBrand(
     await prisma.$transaction([
       prisma.brand.delete({
         where: {
+          //@ts-ignore
           id: parseInt(req.query.id),
         },
       }),

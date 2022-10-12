@@ -14,6 +14,7 @@ export async function setAsDefaultBillingAddress(
   try {
     const billingAddress = await prisma.billingAddress.findFirst({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.billingAddressID),
       },
     });
@@ -21,6 +22,7 @@ export async function setAsDefaultBillingAddress(
     // Every addresses to default false
     await prisma.billingAddress.updateMany({
       where: {
+        //@ts-ignore
         customer_id: parseInt(billingAddress?.customer_id),
       },
       data: {
@@ -30,6 +32,7 @@ export async function setAsDefaultBillingAddress(
 
     await prisma.billingAddress.update({
       where: {
+        //@ts-ignore
         id: parseInt(req.query.billingAddressID),
       },
       data: {
